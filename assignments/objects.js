@@ -12,7 +12,7 @@
 // Example format of an intern object: 1, examples@you.edu, Example, F
 const example = {
   id: 0,
-  name: "Example",
+  name: ["Example","Example2"],
   email: "examples@you.edu",
   gender: "F",
 }
@@ -26,11 +26,16 @@ const interns = [
   gender:"F",
 },
 {
+  
   id:2,
   name:"Kennan",
   email:"kdiben1@tinypic.com",
   gender:"M",
+  speak: function() {
+    return "Hello my name is Kennan!"
+  }
 },
+
 {
   id:3,
   name:"Keven",
@@ -48,6 +53,9 @@ const interns = [
   name:"Antonietta",
   email:"adaine5@samsung.com",
   gender:"F",
+  multiplyNums: function(num1,num2) {
+    return (num1 *num2)
+  },
 }
 ]
 
@@ -68,10 +76,10 @@ console.log(interns[3].name)
 console.log(interns[4].gender)
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
-// console.log(kennan.speak());
+console.log(interns[1].speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-//console.log(antonietta.multiplyNums(3,4));
+console.log(interns[4].multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js. You may come back and attempt the Stretch Challenge once you have completed the challenges in arrays.js and function-conversion.js.
 
